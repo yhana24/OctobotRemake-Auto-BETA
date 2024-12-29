@@ -1,6 +1,6 @@
 module.exports = {
     description: "Restart the server",
-    role: "owner",
+    role: "admin",
     cooldown: 50,
     execute(api, event, args, commands) {
         api.sendMessage("Restarting the server...", event.threadID);
