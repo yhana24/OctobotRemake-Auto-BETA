@@ -29,11 +29,11 @@ module.exports = {
     name: 'ownerupdate',
     description: 'Update bot configuration',
     cooldown: 3,
-    role: 'owner',
+    role: 'admin',
     execute(api, event, args) {
         // Check if command has required arguments
         if (args.length < 2) {
-            api.sendMessage('Invalid command format. Use `owner <key> <value>`.', event.threadID);
+            api.sendMessage('Invalid command format. Use `admin <key> <value>`.', event.threadID);
             return;
         }
 
@@ -45,7 +45,7 @@ module.exports = {
         const value = args.slice(1).join(' ');
 
         // Check if the key exists in the config
-        if (!config.hasOwnProperty(key)) {
+        if (!config.hasadminProperty(key)) {
             api.sendMessage(`Invalid key "${key}".`, event.threadID);
             return;
         }
